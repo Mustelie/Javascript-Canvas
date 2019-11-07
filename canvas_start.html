@@ -18,4 +18,26 @@
     <canvas id = "myCanvas" width = "350" height = "500"  ></canvas>
     <input type = "color" id = "picker"/>
 </body>
+<script>
+	var canvas = document.querySelector('#myCanvas')
+	var ctx = canvas.getContext('2d')
+	ctx.fillStyle = '00ff00'
+	// ctx.fillRect(150, 50,150,75)
+	// draw();
+	
+	function draw(posX,posY){
+		console.log('I am drawing')
+		ctx.arc(posX,posY,50,0, 2*Math.PI);
+		ctx.fill();;
+	}
+	myCanvas.addEventListener(
+		'mousemove', function(e){
+			console.log(e)
+			draw(e.x, e.y);
+		})
+	window.addEventListener	(
+		'keydown', function 	(c) {
+			
+		})
+</script>
 </html>
