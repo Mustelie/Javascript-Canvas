@@ -21,13 +21,14 @@
 <script>
 	var canvas = document.querySelector('#myCanvas')
 	var ctx = canvas.getContext('2d')
+	var drawcolor = '00ff00'
 	ctx.fillStyle = '00ff00'
 	// ctx.fillRect(150, 50,150,75)
 	// draw();
 	
 	function draw(posX,posY){
 		console.log('I am drawing')
-		ctx.arc(posX,posY,50,0, 2*Math.PI);
+		ctx.arc(posX,posY,10,0, 2*Math.PI);
 		ctx.fill();;
 	}
 	myCanvas.addEventListener(
@@ -36,8 +37,14 @@
 			draw(e.x, e.y);
 		})
 	window.addEventListener	(
-		'keydown', function 	(c) {
-			
+		'keydown', function (r) {
+			drawcolor = 'f54242'
 		})
+	// window.addEventListener('keydown', function (e) {
+ //      myGameArea.key = e.keyCode;
+ //    })
+ //    window.addEventListener('keyup', function (e) {
+ //      myGameArea.key = false;
+ //    }
 </script>
 </html>
